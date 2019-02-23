@@ -1,0 +1,25 @@
+<VirtualHost *:90>
+	ServerAdmin root@re.net
+	ServerName   graylog.re.net
+	DocumentRoot /opt/graylog2/graylog2-web/public
+	RailsEnv 'production'
+
+	<Directory /opt/graylog2/graylog2-web/public>
+    	AllowOverride all
+    	Options -MultiViews
+    	Allow from all
+</Directory>
+
+	ErrorLog /var/log/apache2/error.log
+	LogLevel warn
+	CustomLog /var/log/apache2/access.log combined
+
+
+CustomLog "|/usr/bin/logger -t httpd -p  local6.info" combined
+ErrorLog syslog:local6
+
+
+
+</VirtualHost>
+
+

@@ -1,0 +1,20 @@
+server {
+listen 80;
+server_name  prod.re.net;
+location / {
+#root   /var/www/re;
+#index re.html
+# rewrite ^ http://www.re.net:90$request_uri? permanent;
+#return 301 http://www.re.net$request_uri;
+#rewrite ^ $scheme://www.re.net$request_uri permanent;
+
+	proxy_pass http://172.16.0.3;
+	proxy_set_header	Host        	$host;
+	proxy_set_header	X-Real-IP   	$remote_addr;
+	proxy_set_header	X-Forwarded-for $remote_addr;
+	port_in_redirect off;
+
+
+}
+}
+

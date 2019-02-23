@@ -1,0 +1,8 @@
+<VirtualHost *:90>
+ServerAdmin root@re.net
+ServerName   blog.re.net
+ServerAlias  blog.re.net
+DocumentRoot /var/www/wordpress
+DirectoryIndex index.php
+</VirtualHost>
+

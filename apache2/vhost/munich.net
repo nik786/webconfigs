@@ -1,0 +1,9 @@
+<VirtualHost *:90>
+    ServerAdmin  root@munich.com
+    ServerName  munich.com
+    ServerAlias www.munich.com
+    DocumentRoot /var/www/munich
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+

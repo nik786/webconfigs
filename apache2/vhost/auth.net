@@ -1,0 +1,19 @@
+<VirtualHost *:90>
+#ServerAdmin    root@cloudx.com
+#ServerName      www.cloudx.com
+#ServerAdmin     root@cloudx.com
+#DocumentRoot	/var/www/html/cloudx
+#<Directory   “/var/www/html/cloudx“>
+#Options 	All Indexes FollowSymLinks
+#AuthName	"Secure Content"
+#AuthUserFile	/etc/httpd/conf/.htpasswd
+#AuthType    	Basic
+#Require     	"valid-user"
+#AllowOverride	AuthConfig
+#Order allow,deny
+#Allow from all
+#</Directory>
+#ErrorLog      	logs/dummy-host.cloudx.com-error_log
+#CustomLog     	logs/dummy-host.cloudx.com-access_log common
+#</VirtualHost>
+

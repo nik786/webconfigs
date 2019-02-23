@@ -1,0 +1,16 @@
+server {
+listen          stage.pearson.com:80;
+server_name     stage.pearson.com;
+add_header Access-Control-Allow-Origin "*";
+root            /var/www/pearson-stack;
+
+location /openam/ {
+        proxy_pass http://openam.pearson.com:8080;
+        }
+
+location /Stage {
+       proxy_ssl_server_name on;
+       proxy_pass  https://ul7gkemynf.execute-api.us-west-2.amazonaws.com/Stage;
+       }
+
+

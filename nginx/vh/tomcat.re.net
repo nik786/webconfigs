@@ -1,0 +1,14 @@
+server {
+listen     	tomcat.re.net:80;
+server_name	tomcat.re.net;
+location / {
+
+#root /opt/tomcat/
+	proxy_pass http://tomcat.re.net:8080;
+	proxy_set_header	Host        	$host;
+	proxy_set_header	X-Real-IP   	$remote_addr;
+	proxy_set_header	X-Forwarded-for $remote_addr;
+	port_in_redirect off;
+}
+}
+

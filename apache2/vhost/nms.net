@@ -1,0 +1,8 @@
+<VirtualHost *:90>
+ServerAdmin root@re.net
+ServerName   nms.re.net
+#ServerAlias  nms.re.net
+DocumentRoot /opt/icinga/share
+#DirectoryIndex index.html
+</VirtualHost>
+

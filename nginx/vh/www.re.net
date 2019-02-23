@@ -1,0 +1,21 @@
+server {
+listen 80;
+server_name  www.re.net;
+
+location / {
+return 444;
+}
+
+location /blog {
+rewrite ^/blog(.*) http://blog2.re.net$1 permanent;
+ }
+
+location /website {
+rewrite ^/website(.*) http://www.raweng.com$1 permanent;
+}
+
+location /kurbkarma {
+rewrite ^/kurbkarma(.*) http://www.kurbkarma.com$1;
+
+}
+
