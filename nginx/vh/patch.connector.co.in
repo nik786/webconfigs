@@ -1,6 +1,6 @@
 server {
 listen       80;
-server_name  ec2-54-159-8-36.compute-1.amazonaws.com;
+server_name  ec2-xxxxxx;
 root /opt/disk1/devops-html/patch;
 
 
